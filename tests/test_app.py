@@ -19,6 +19,6 @@ class TestAPI(unittest.TestCase):
         response = self.app.get(f'/sum/result/{invalid_result}')
         self.assertEqual(response.status_code, 404) 
         self.assertEqual(response.get_json(), {'error': 'Result not found'})
-        
+
 if __name__ == '__main__':
     unittest.main()
