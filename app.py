@@ -7,7 +7,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 app = Flask(__name__)
 ma = Marshmallow(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://m16l2_excercise1_sum_post_user:7G7LpYpFSdcI9QZ7obBEBimdg19ZVhC3@dpg-cqoo6nggph6c73f9kdb0-a.oregon-postgres.render.com/m16l2_excercise1_sum_post'
-app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONs'] = False
 
 class Base(DeclarativeBase):
     pass
