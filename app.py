@@ -59,5 +59,5 @@ def find_by_result(result):
     return sums_schema.jsonify(sums), 200
 
 with app.app_context():
-    db.drop_all()
+    #db.drop_all()
     db.create_all()
