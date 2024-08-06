@@ -54,10 +54,9 @@ def sum():
 #added for assigment m16l2
 @app.route('/sum/result/<int:result>', methods=['GET'])
 def find_by_result(result):
-    sums = db.session.execute(
-        db.select(Sum).filter_by(result=result)
-    ).scalars()
+    sums = Sum.query.filter_by(result=result).all()
     return sums_schema.jsonify(sums), 200
+
 
 with app.app_context():
     db.drop_all()
